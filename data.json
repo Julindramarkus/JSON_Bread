@@ -1,0 +1,26 @@
+[
+   {
+      "id": 1503472230188,
+      "string": "markus",
+      "integer": "5",
+      "float": "0.04",
+      "date": "2017-08-16",
+      "boolean": "true"
+   },
+   {
+      "id": 1507707465287,
+      "string": "hahaha",
+      "integer": "12",
+      "float": "1.1",
+      "date": "2017-10-02",
+      "boolean": "false"
+   },
+   {
+      "id": 1507778688354,
+      "string": "codago",
+      "integer": "1",
+      "float": "1.1",
+      "date": "2017-10-01",
+      "boolean": "true"
+   }
+]

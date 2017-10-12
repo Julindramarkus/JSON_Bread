@@ -1,0 +1,68 @@
+<% include partials/header %>
+<style>
+h1 {text-align: center;}
+</style>
+  <h1>CRUD (Create - Read - Update - Delete)</h1>
+  <br>
+
+  <div class="container">
+
+    <div class="jumbotron">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">BREAD (Browse, Read, Edit, Add, Delete)</h3>
+      </div>
+      <div class="panel-body">
+        <div id=menu>
+          <a class="btn btn-primary" href="/">Home</a> | <a class="btn btn-info" href="add">Add</a>
+      </div>
+
+        <br>
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>String</th>
+          <th>Integer</th>
+          <th>Float</th>
+          <th>Date</th>
+          <th>Boolean</th>
+          <th>Actions</th>
+          <th>Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<data.length; i++) {%>
+        <tr>
+          <td><%=data[i].id %></td>
+          <td><%=data[i].string %></td>
+          <td><%=data[i].integer %></td>
+          <td><%=data[i].float %></th>
+          <td><%=data[i].date %></th>
+          <td><%=data[i].boolean %></th>
+          <td>
+              <a class="btn btn-success" href="edit/<%=data[i].id %>">edit</a>
+              <a class ="btn btn-danger" onclick="return confirm('Are you sure?')" href="delete/<%=data[i].id %>">delete</a>
+          </td>
+          <td>   <img src="/images/milan.jpg" width="25 px" > </td>
+        </tr>
+        <% } %>
+
+      </table>
+      </div>
+    </div>
+
+    <ul class="pagination">
+     <li class="active"><a href="#">1</a></li>
+     <li><a href="#">2</a></li>
+     <li><a href="#">3</a></li>
+     <li><a href="#">4</a></li>
+     <li><a href="#">5</a></li>
+    </ul>
+    </div>
+</div>
+
+
+
+<% include partials/footer %>
